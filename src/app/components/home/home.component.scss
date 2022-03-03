@@ -1,0 +1,79 @@
+#hero {
+  background-image: url('../../../assets/images/home_bg.jpg');
+  background-position: center;
+  background-size: cover;
+
+  .hero-logo {
+    width: 100vw;
+    border-radius: 0.5rem;
+  }
+
+  .hero-container {
+    height: 70vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding: 4rem 1rem;
+
+    background-color: rgba(0, 0, 0, 0.6);
+
+    .hero-text-container {
+      width: 100%;
+      color: var(--tertiary-contrast-bg);
+      margin-top: 2rem;
+      text-align: center;
+
+      .title {
+        margin-bottom: 2rem;
+        font-size: 4rem;
+      }
+
+      .subtitle {
+        margin-bottom: 2rem;
+        font-family: 'Kalam', cursive;
+      }
+
+      .welcome-description {
+        font-weight: 300;
+      }
+    }
+
+    .hero-actions {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 2rem;
+
+      button {
+        background-color: var(--primary-color);
+        color: var(--primary-contrast-bg);
+      }
+    }
+  }
+}
+#place-description {
+  padding: 5rem 0;
+  color: var(--primary-contrast-bg-alt);
+
+  .description-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
+    .section-title {
+      margin-bottom: 1rem;
+    }
+
+    .section-subtitle {
+      margin-bottom: 2rem;
+      font-family: 'Kalam', cursive;
+    }
+    .section-description{
+      margin-bottom: 1rem;
+    }
+  }
+}
