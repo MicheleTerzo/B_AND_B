@@ -1,7 +1,13 @@
 header {
   height: 8vh;
   background-color: var(--primary-color);
-  color: var(--secondary-contrast-bg);
+  color: var(--custom-white);
+  .container-fluid {
+    height: 100%;
+    .row {
+      height: 100%;
+    }
+  }
 
   .sidenav-button-container {
     display: flex;
@@ -20,8 +26,7 @@ header {
   background-color: var(--primary-contrast-bg-alt);
 
   .mat-menu-item {
-    color: var(--secondary-contrast-bg);
+    color: var(--secondary-color-alt);
     font-family: 'Comfortaa';
-
   }
 }

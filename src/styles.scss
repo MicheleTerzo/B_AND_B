@@ -12,16 +12,9 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: 'Comfortaa', Roboto, "Helvetica Neue", sans-serif;
-  background-color: var(--background-color);
+  background-color: var(--custom-white);
 }
 
-.container-fluid {
-  height: 100%;
-}
-
-.row {
-  height: 100%;
-}
 
 h1, h2, h3, h4, h5, h6, p {
   margin: 0;
