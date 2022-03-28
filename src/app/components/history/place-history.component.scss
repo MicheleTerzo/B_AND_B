@@ -1,0 +1,22 @@
+.history-container {
+  background-image: url('../../../assets/images/bg_2.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 5rem;
+
+  &-card {
+    background: var(--custom-white);
+    border-radius: 1rem;
+  }
+}
+.card-title{
+  font-family: 'Kalam', cursive;
+}
+
+.img-container {
+  width: calc(100%);
+
+  img {
+    width: 100%;
+  }
+}

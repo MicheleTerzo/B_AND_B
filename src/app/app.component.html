@@ -1,41 +1,9 @@
-<mat-sidenav-container hasBackdrop>
-  <mat-sidenav #sidenav mode="over" >
-    <div class="logo-container">
-      <img alt="" class="logo-img" src="assets/logos/facebook_cover_photo_1.png" />
-    </div>
-
-    <div class="menu-container">
-      <ul class="m-0 p-0">
-        <li matRipple>
-          <p>Home</p>
-        </li>
-        <li matRipple>
-          <p>Camere</p>
-        </li>
-
-        <li matRipple>
-          <p>Chi siamo</p>
-        </li>
-
-        <li matRipple>
-          <p>Contatti</p>
-        </li>
-      </ul>
-    </div>
-    <div class="social-container">
-      <button mat-icon-button>
-        <i class="fa-brands fa-instagram fa-2x"></i>
-      </button>
-      <button mat-icon-button>
-        <i class="fa-brands fa-facebook fa-2x"></i>
-      </button>
-      <button mat-icon-button>
-        <i class="fa-brands fa-youtube fa-2x"></i>
-      </button>
-    </div>
-  </mat-sidenav>
-  <mat-sidenav-content>
-    <app-header [sidenav]="sidenav"></app-header>
-    <router-outlet></router-outlet>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+<app-header></app-header>
+<main>
+  <section #jumbotron>
+    <app-jumbotron></app-jumbotron>
+  </section>
+  <section #history>
+    <app-place-history></app-place-history>
+  </section>
+</main>

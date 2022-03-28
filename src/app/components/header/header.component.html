@@ -1,20 +1,12 @@
 <header>
   <div class="container-fluid">
-    <div class="row">
-      <div class="col-6 sidenav-button-container">
-        <button (click)="sidenav.toggle()" mat-icon-button>
-          <i class="fa-solid fa-bars fa-2x"></i>
-        </button>
-      </div>
+    <div class="row d-flex justify-content-center align-items-center">
       <div class="col-6 user-button-container">
-        <button mat-icon-button [matMenuTriggerFor]="userMenu">
-          <i class="fa-regular fa-circle-user fa-2x"></i>
-        </button>
+        <h3 class="m-4 header-text">Chi siamo</h3>
+        <h3 class="m-4 header-text">Dove trovarci</h3>
+        <h3 class="m-4 header-text">Contatti</h3>
+        <h3 class="m-4 header-text">Prenota ora</h3>
       </div>
     </div>
   </div>
 </header>
-<mat-menu #userMenu="matMenu">
-  <button mat-menu-item>Registrati</button>
-  <button mat-menu-item>Accedi</button>
-</mat-menu>

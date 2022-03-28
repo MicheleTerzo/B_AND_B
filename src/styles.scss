@@ -1,9 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
-@import "../node_modules/bootstrap/dist/css/bootstrap.css";
-@import "styles/custom-palette";
-@import "styles/custom-icons";
+@import '../node_modules/bootstrap/dist/css/bootstrap.css';
+@import 'styles/custom-palette';
+@import 'styles/custom-icons';
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -11,12 +12,18 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Comfortaa', Roboto, "Helvetica Neue", sans-serif;
+  font-family: 'Comfortaa', Roboto, 'Helvetica Neue', sans-serif;
   background-color: var(--custom-white);
+  overflow-x: hidden;
 }
 
-
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   margin: 0;
   padding: 0;
 }
@@ -25,6 +32,6 @@ h1, h2, h3, h4, h5, h6, p {
   border: 1px solid var(--error-color);
 }
 
-button{
+button {
   font-family: 'Comfortaa';
 }
