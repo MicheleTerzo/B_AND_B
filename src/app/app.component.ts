@@ -1,10 +1,60 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
-  title = 'B-B';
+export class AppComponent implements AfterViewInit {
+  @ViewChild('history') historySection: ElementRef;
+  @ViewChild('jumbotron') jumbotronSection: ElementRef;
+  @ViewChild('scrollButton') scrollButton: ElementRef;
+
+  private _isJumbotronScrolledIntoView: boolean = false;
+
+  get isJumbotronScrolledIntoView(): boolean {
+    return this._isJumbotronScrolledIntoView;
+  }
+
+  set isJumbotronScrolledIntoView(b: boolean) {
+    this._isJumbotronScrolledIntoView = b;
+  }
+
+  scrollToSection(sectionName: string): void {
+    switch (sectionName) {
+      case 'jumbotron': {
+        console.log(this.jumbotronSection);
+        this.jumbotronSection.nativeElement.scrollIntoView();
+        break;
+      }
+      case 'history': {
+        this.historySection.nativeElement.scrollIntoView();
+        break;
+      }
+      case 'findUs': {
+        break;
+      }
+      case 'contacts': {
+        break;
+      }
+      case 'book': {
+        break;
+      }
+    }
+  }
+
+  ngAfterViewInit() {
+    this.scrollButton.nativeElement.classList.add('scroll-to-top-button-invisible');
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  isScrolledIntoView() {
+    if (this.jumbotronSection) {
+      const rect = this.jumbotronSection.nativeElement.getBoundingClientRect();
+      const topShown = rect.top >= -50;
+      const bottomShown = rect.bottom <= window.innerHeight;
+      this.isJumbotronScrolledIntoView = topShown && bottomShown;
+      console.log(this.isJumbotronScrolledIntoView);
+    }
+  }
 }

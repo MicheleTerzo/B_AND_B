@@ -2,10 +2,14 @@
   <div class="container-fluid">
     <div class="row d-flex justify-content-center align-items-center">
       <div class="col-6 user-button-container">
-        <h3 class="m-4 header-text">Chi siamo</h3>
-        <h3 class="m-4 header-text">Dove trovarci</h3>
-        <h3 class="m-4 header-text">Contatti</h3>
-        <h3 class="m-4 header-text">Prenota ora</h3>
+        <h3
+          *ngFor="let item of headerItems; let i = index"
+          class="m-4 header-text"
+          (click)="emitClickedItem(i)"
+          [id]="item.id"
+        >
+          {{ item.text }}
+        </h3>
       </div>
     </div>
   </div>

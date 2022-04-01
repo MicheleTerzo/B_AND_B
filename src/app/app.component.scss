@@ -3,4 +3,27 @@ app-header {
   width: 100%;
 }
 
+.scroll-to-top-button {
+  height: 4.5rem;
+  width: 4.5rem;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  color: var(--custom-white);
+  box-shadow: 0 0 8px -1px #000;
+  transition: all 300ms ease-in-out;
+  &-visible {
+    opacity: 1;
+  }
 
+  &-invisible {
+    opacity: 0;
+  }
+}

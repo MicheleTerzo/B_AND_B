@@ -1,4 +1,6 @@
-<app-header></app-header>
+<header>
+  <app-header (itemEmitter)="scrollToSection($event)"></app-header>
+</header>
 <main>
   <section #jumbotron>
     <app-jumbotron></app-jumbotron>
@@ -6,4 +8,16 @@
   <section #history>
     <app-place-history></app-place-history>
   </section>
+  <div
+    #scrollButton
+    (click)="scrollToSection('jumbotron')"
+    [ngClass]="{
+      'scroll-to-top-button-visibile': !isJumbotronScrolledIntoView,
+      'scroll-to-top-button-invisible': isJumbotronScrolledIntoView
+    }"
+    class="scroll-to-top-button"
+    mat-ripple
+  >
+    <i class="fa-solid fa-arrow-up fa-2x"></i>
+  </div>
 </main>
