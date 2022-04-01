@@ -1,9 +1,9 @@
 <header>
-  <app-header (itemEmitter)="scrollToSection($event)"></app-header>
+  <app-header (itemEmitter)="scrollToSection($event)" [isViewportAtTop]="isViewportAtTop"></app-header>
 </header>
 <main>
   <section #jumbotron>
-    <app-jumbotron></app-jumbotron>
+    <app-jumbotron (discoverEmitter)="scrollToSection('history')"></app-jumbotron>
   </section>
   <section #history>
     <app-place-history></app-place-history>

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { IHeaderItems } from '../../interfaces/iheader-items';
 
 @Component({
@@ -8,7 +8,6 @@ import { IHeaderItems } from '../../interfaces/iheader-items';
 })
 export class HeaderComponent {
   @Output() itemEmitter: EventEmitter<string> = new EventEmitter<string>();
-
   headerItems: IHeaderItems[] = [
     {
       text: 'La Storia',
@@ -27,6 +26,17 @@ export class HeaderComponent {
       id: 'book',
     },
   ];
+
+  private _isViewportAtTop: boolean = true;
+
+  get isViewportAtTop(): boolean {
+    return this._isViewportAtTop;
+  }
+
+  @Input() set isViewportAtTop(value: boolean) {
+    this._isViewportAtTop = value;
+    console.log(value);
+  }
 
   emitClickedItem(itemIndex: number): void {
     this.itemEmitter.emit(this.headerItems[itemIndex].id);

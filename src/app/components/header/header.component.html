@@ -1,12 +1,12 @@
-<header>
+<header [ngClass]="{'header-transparent': isViewportAtTop, 'header-colored': !isViewportAtTop}">
   <div class="container-fluid">
     <div class="row d-flex justify-content-center align-items-center">
       <div class="col-6 user-button-container">
         <h3
-          *ngFor="let item of headerItems; let i = index"
-          class="m-4 header-text"
           (click)="emitClickedItem(i)"
+          *ngFor="let item of headerItems; let i = index"
           [id]="item.id"
+          class="m-4 header-text"
         >
           {{ item.text }}
         </h3>

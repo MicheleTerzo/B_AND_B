@@ -1,9 +1,9 @@
 header {
   height: 10vh;
-  background-color: rgba(0, 0, 0, 0);
   user-select: none;
   font-weight: bolder;
-
+  transition: all 300ms ease-in-out;
+  z-index: 1000;
   .container-fluid {
     height: 100%;
 
@@ -27,7 +27,7 @@ header {
     cursor: pointer;
 
     .header-text {
-      font-family: 'Comfortaa', Roboto, "Helvetica Neue", sans-serif;
+      font-family: 'Comfortaa', Roboto, 'Helvetica Neue', sans-serif;
       border-bottom: 2px solid transparent;
       transition: all 300ms ease-in-out;
       color: var(--custom-white);
@@ -37,4 +37,12 @@ header {
       }
     }
   }
+}
+
+.header-transparent {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.header-colored {
+  background-color: var(--primary-color);
 }

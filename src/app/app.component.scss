@@ -1,11 +1,12 @@
 app-header {
   position: fixed;
   width: 100%;
+  z-index: 1000;
 }
 
 .scroll-to-top-button {
-  height: 4.5rem;
-  width: 4.5rem;
+  height: 4rem;
+  width: 4rem;
   border-radius: 50%;
   background-color: var(--secondary-color);
   display: flex;
@@ -19,6 +20,9 @@ app-header {
   color: var(--custom-white);
   box-shadow: 0 0 8px -1px #000;
   transition: all 300ms ease-in-out;
+  &:hover{
+    background-color: var(--primary-color);
+  }
   &-visible {
     opacity: 1;
   }

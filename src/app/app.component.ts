@@ -16,8 +16,18 @@ export class AppComponent implements AfterViewInit {
     return this._isJumbotronScrolledIntoView;
   }
 
-  set isJumbotronScrolledIntoView(b: boolean) {
-    this._isJumbotronScrolledIntoView = b;
+  set isJumbotronScrolledIntoView(value: boolean) {
+    this._isJumbotronScrolledIntoView = value;
+  }
+
+  private _isViewportAtTop: boolean = true;
+
+  get isViewportAtTop(): boolean {
+    return this._isViewportAtTop;
+  }
+
+  set isViewportAtTop(value: boolean) {
+    this._isViewportAtTop = value;
   }
 
   scrollToSection(sectionName: string): void {
@@ -54,7 +64,7 @@ export class AppComponent implements AfterViewInit {
       const topShown = rect.top >= -50;
       const bottomShown = rect.bottom <= window.innerHeight;
       this.isJumbotronScrolledIntoView = topShown && bottomShown;
-      console.log(this.isJumbotronScrolledIntoView);
     }
+    this.isViewportAtTop = window.scrollY <= 0;
   }
 }
