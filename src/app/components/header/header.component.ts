@@ -1,5 +1,5 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { IHeaderItems } from '../../interfaces/iheader-items';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {IHeaderItems} from '../../interfaces/iheader-items';
 
 @Component({
   selector: 'app-header',
@@ -14,16 +14,16 @@ export class HeaderComponent {
       id: 'history',
     },
     {
+      text: 'La Struttura',
+      id: 'structure',
+    },
+    {
       text: 'Dove trovarci',
       id: 'findUs',
     },
     {
       text: 'Contatti',
       id: 'contacts',
-    },
-    {
-      text: 'Prenota',
-      id: 'book',
     },
   ];
 
@@ -35,7 +35,6 @@ export class HeaderComponent {
 
   @Input() set isViewportAtTop(value: boolean) {
     this._isViewportAtTop = value;
-    console.log(value);
   }
 
   emitClickedItem(itemIndex: number): void {

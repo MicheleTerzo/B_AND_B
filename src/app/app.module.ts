@@ -13,9 +13,10 @@ import { MatRippleModule } from '@angular/material/core';
 import { ImageSliderComponent } from './shared/components/image-slider/image-slider.component';
 import { JumbotronComponent } from './components/jumbotron/jumbotron.component';
 import { PlaceHistoryComponent } from './components/history/place-history.component';
+import { PlaceDescriptionComponent } from './components/place-description/place-description.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, ImageSliderComponent, JumbotronComponent, PlaceHistoryComponent],
+  declarations: [AppComponent, HeaderComponent, ImageSliderComponent, JumbotronComponent, PlaceHistoryComponent, PlaceDescriptionComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import {AfterViewInit, Component, ElementRef, HostListener, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +8,7 @@ import { AfterViewInit, Component, ElementRef, HostListener, ViewChild } from '@
 export class AppComponent implements AfterViewInit {
   @ViewChild('history') historySection: ElementRef;
   @ViewChild('jumbotron') jumbotronSection: ElementRef;
+  @ViewChild('structure') structureSection: ElementRef;
   @ViewChild('scrollButton') scrollButton: ElementRef;
 
   private _isJumbotronScrolledIntoView: boolean = false;
@@ -33,7 +34,6 @@ export class AppComponent implements AfterViewInit {
   scrollToSection(sectionName: string): void {
     switch (sectionName) {
       case 'jumbotron': {
-        console.log(this.jumbotronSection);
         this.jumbotronSection.nativeElement.scrollIntoView();
         break;
       }
@@ -41,13 +41,15 @@ export class AppComponent implements AfterViewInit {
         this.historySection.nativeElement.scrollIntoView();
         break;
       }
+      case 'structure': {
+        this.structureSection.nativeElement.scrollIntoView();
+
+        break;
+      }
       case 'findUs': {
         break;
       }
       case 'contacts': {
-        break;
-      }
-      case 'book': {
         break;
       }
     }
