@@ -19,7 +19,7 @@ export class HeaderComponent {
     },
     {
       text: 'Dove trovarci',
-      id: 'findUs',
+      id: 'location',
     },
     {
       text: 'Contatti',

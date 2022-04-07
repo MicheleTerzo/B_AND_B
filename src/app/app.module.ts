@@ -14,9 +14,10 @@ import { ImageSliderComponent } from './shared/components/image-slider/image-sli
 import { JumbotronComponent } from './components/jumbotron/jumbotron.component';
 import { PlaceHistoryComponent } from './components/history/place-history.component';
 import { PlaceDescriptionComponent } from './components/place-description/place-description.component';
+import { LocationComponent } from './components/location/location.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, ImageSliderComponent, JumbotronComponent, PlaceHistoryComponent, PlaceDescriptionComponent],
+  declarations: [AppComponent, HeaderComponent, ImageSliderComponent, JumbotronComponent, PlaceHistoryComponent, PlaceDescriptionComponent, LocationComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

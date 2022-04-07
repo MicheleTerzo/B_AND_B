@@ -1,0 +1,24 @@
+.place-location {
+  width: 100vw;
+  padding: 15vh 0;
+
+}
+
+
+.map-frame {
+  padding: 0.5rem;
+  background-color: var(--secondary-color);
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 17px 0px rgba(0, 0, 0, 0.7);
+
+  iframe {
+    box-shadow: 0 0 17px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+    position: relative;
+    top: -1.5rem;
+    left: -1.5rem;
+  }
+}
