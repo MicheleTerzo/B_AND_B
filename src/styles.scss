@@ -35,6 +35,16 @@ p {
   padding: 0;
 }
 
+.link {
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--secondary-color);
+
+  &:hover {
+    color: var(--primary-color);
+  }
+}
+
 .debug {
   border: 1px solid var(--error-color);
 }

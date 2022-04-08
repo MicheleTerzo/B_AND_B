@@ -9,8 +9,9 @@ export class AppComponent implements AfterViewInit {
   @ViewChild('history') historySection: ElementRef;
   @ViewChild('jumbotron') jumbotronSection: ElementRef;
   @ViewChild('structure') structureSection: ElementRef;
-  @ViewChild('location') sectionLocation: ElementRef;
+  @ViewChild('location') locationSection: ElementRef;
   @ViewChild('scrollButton') scrollButton: ElementRef;
+  @ViewChild('contacts') contactsSection: ElementRef;
 
   private _isJumbotronScrolledIntoView: boolean = false;
 
@@ -47,10 +48,12 @@ export class AppComponent implements AfterViewInit {
         break;
       }
       case 'location': {
-        this.sectionLocation.nativeElement.scrollIntoView();
+        this.locationSection.nativeElement.scrollIntoView();
         break;
       }
       case 'contacts': {
+        this.contactsSection.nativeElement.scrollIntoView();
+
         break;
       }
     }
