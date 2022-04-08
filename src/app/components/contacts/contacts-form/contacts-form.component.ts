@@ -12,4 +12,8 @@ export class ContactsFormComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  sendForm(): void {
+    console.info('inviatooo')
+  }
+
 }

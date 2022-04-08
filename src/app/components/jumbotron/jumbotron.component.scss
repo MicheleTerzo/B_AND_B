@@ -7,7 +7,6 @@
   background-attachment: fixed;
   box-shadow: 0 0 18px 4px rgba(0, 0, 0, 0.3);
 
-
   .jumbotron-container {
     background-color: rgba(0, 0, 0, 0.6);
     height: 100%;
@@ -42,11 +41,6 @@
         text-align: center;
         color: var(--custom-white);
         line-height: 2.5rem;
-      }
-
-      button {
-        background-color: var(--secondary-color);
-        color: var(--custom-white);
       }
     }
   }

@@ -8,14 +8,27 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+
   p {
     font-size: 1.2rem;
   }
+
   &-icon {
-    color: var(--secondary-color);
+    color: var(--primary-color);
   }
 }
 
 .highlighted-text {
-  color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+.message {
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+  border-bottom: 0 solid rgba(0, 0, 0, 0);
+
+  &:hover {
+    color: var(--accent-color);
+    border-bottom: 1px solid var(--accent-color);
+  }
 }
