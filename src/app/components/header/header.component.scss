@@ -47,6 +47,6 @@ header {
 }
 
 .header-colored {
-  background-color: #400010;
+  background-color: var(--accent-color);
   box-shadow: 0 0 18px 4px rgba(0, 0, 0, 0.3);
 }
