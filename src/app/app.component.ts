@@ -13,6 +13,8 @@ export class AppComponent implements AfterViewInit {
   @ViewChild('scrollButton') scrollButton: ElementRef;
   @ViewChild('contacts') contactsSection: ElementRef;
 
+  constructor() {}
+
   private _isJumbotronScrolledIntoView: boolean = false;
 
   get isJumbotronScrolledIntoView(): boolean {

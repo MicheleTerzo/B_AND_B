@@ -20,6 +20,8 @@ import { ContactsFormComponent } from './components/contacts/contacts-form/conta
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FooterComponent } from './components/footer/footer.component';
+import { AngularFireModule } from '@angular/fire/compat';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -35,6 +37,7 @@ import { FooterComponent } from './components/footer/footer.component';
     FooterComponent,
   ],
   imports: [
+    AngularFireModule.initializeApp(environment.firebaseConfig),
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
