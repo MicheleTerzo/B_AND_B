@@ -15,9 +15,25 @@ import { JumbotronComponent } from './components/jumbotron/jumbotron.component';
 import { PlaceHistoryComponent } from './components/history/place-history.component';
 import { PlaceDescriptionComponent } from './components/place-description/place-description.component';
 import { LocationComponent } from './components/location/location.component';
+import { ContactsComponent } from './components/contacts/contacts-component/contacts.component';
+import { ContactsFormComponent } from './components/contacts/contacts-form/contacts-form.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, ImageSliderComponent, JumbotronComponent, PlaceHistoryComponent, PlaceDescriptionComponent, LocationComponent],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    ImageSliderComponent,
+    JumbotronComponent,
+    PlaceHistoryComponent,
+    PlaceDescriptionComponent,
+    LocationComponent,
+    ContactsComponent,
+    ContactsFormComponent,
+    FooterComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -28,6 +44,8 @@ import { LocationComponent } from './components/location/location.component';
     MatMenuModule,
     MatListModule,
     MatRippleModule,
+    MatFormFieldModule,
+    MatInputModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,14 +1,13 @@
 .place-description {
   padding: 15vh 0;
-  //color: var(--custom-white);
+  box-shadow: inset 0 0 18px 4px rgba(0, 0, 0, 0.3);
+
+  background-color: var(--custom-white-2);
 }
 
 .img-container {
   width: calc(80%);
   height: calc(100%);
-  //border-radius: 1rem;
-  //border-bottom-right-radius: 1rem;
-  //background-color: var(--custom-white);
 
   img {
     box-shadow: 0 0 17px 0px rgba(0, 0, 0, 0.7);
@@ -20,5 +19,19 @@
 }
 
 .structure-description {
-  font-size: 1.4rem;
+  background-color: var(--custom-white);
+  padding: 1rem;
+  box-shadow: 0 0 17px 0px rgba(0, 0, 0, 0.2);
+  //border-radius: 1rem;
+  border-top-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+
+  .text-container {
+    font-size: 1.2rem;
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    //border-radius: 1rem;
+    border: 2px solid var(--secondary-color);
+    padding: 1rem;
+  }
 }
