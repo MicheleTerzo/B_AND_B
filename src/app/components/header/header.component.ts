@@ -1,5 +1,5 @@
-import {Component, EventEmitter, Input, Output} from '@angular/core';
-import {IHeaderItems} from '../../interfaces/iheader-items';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { IHeaderItems } from '../../interfaces/iheader-items';
 
 @Component({
   selector: 'app-header',
@@ -10,11 +10,11 @@ export class HeaderComponent {
   @Output() itemEmitter: EventEmitter<string> = new EventEmitter<string>();
   headerItems: IHeaderItems[] = [
     {
-      text: 'La Storia',
+      text: 'Storia',
       id: 'history',
     },
     {
-      text: 'La Struttura',
+      text: 'Struttura',
       id: 'structure',
     },
     {

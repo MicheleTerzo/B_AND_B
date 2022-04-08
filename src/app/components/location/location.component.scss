@@ -1,14 +1,19 @@
 .place-location {
   width: 100vw;
-  padding: 15vh 0;
+  padding: 15vh 15vw;
   background-color: var(--custom-white);
 }
 
 iframe {
-  box-shadow: 0 0 17px 0px rgba(0, 0, 0, 0.2);
   border-radius: 1rem;
+
 }
 
 .map-frame{
   height: 60vh;
+  border: 3px solid var(--secondary-color);
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 17px 0px rgba(0, 0, 0, 0.2);
+
 }
