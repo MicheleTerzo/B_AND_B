@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
-@import '../node_modules/bootstrap/dist/css/bootstrap.css';
-@import 'styles/theme/theme';
-@import 'styles/custom-icons';
+@import "../node_modules/bootstrap/dist/css/bootstrap.css";
+@import "styles/theme/theme";
+@import "styles/custom-icons";
 
 html,
 body {
@@ -19,7 +19,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Comfortaa', Roboto, 'Helvetica Neue', sans-serif;
+  font-family: "Comfortaa", Roboto, "Helvetica Neue", sans-serif;
   background-color: var(--custom-white);
   overflow-x: hidden;
 }
@@ -72,4 +72,27 @@ p {
   padding-bottom: 1rem;
   text-align: center;
   border-bottom: 3px solid var(--primary-color);
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+}
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: 768px) {
+  .section-title{
+    font-size: 1.9rem;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (max-width: 992px) {
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (max-width: 1200px) {
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (max-width: 1400px) {
 }
