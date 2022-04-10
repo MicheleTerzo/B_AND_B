@@ -6,7 +6,6 @@
 
 iframe {
   border-radius: 1rem;
-
 }
 
 .map-frame {
@@ -15,5 +14,31 @@ iframe {
   padding: 1rem;
   border-radius: 1rem;
   box-shadow: 0 0 17px 0 rgba(0, 0, 0, 0.2);
+}
 
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+}
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: 768px) {
+.place-location{
+  padding: 5vh 5vw;
+}
+
+  .map-frame{
+    width: 100%;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (max-width: 992px) {
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (max-width: 1200px) {
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (max-width: 1400px) {
 }
