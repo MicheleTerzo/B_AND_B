@@ -1,10 +1,9 @@
 .header-container {
-  height: 10vh;
+  height: 150px;
   user-select: none;
   font-weight: bolder;
   transition: all 300ms ease-in-out;
   z-index: 1000;
-
 
   .container-fluid {
     height: 100%;
@@ -14,7 +13,6 @@
     }
   }
 
-
   .user-button-container {
     height: 100%;
     display: flex;
@@ -23,7 +21,7 @@
     cursor: pointer;
 
     .header-text {
-      font-family: 'Comfortaa', Roboto, 'Helvetica Neue', sans-serif;
+      font-family: "Comfortaa", Roboto, "Helvetica Neue", sans-serif;
       border-bottom: 2px solid transparent;
       transition: all 300ms ease-in-out;
       color: var(--custom-white);
@@ -48,5 +46,39 @@
 .mobile-container {
   .menu-icon {
     color: var(--custom-white);
+    transition: all 300ms ease-in-out;
   }
+}
+::ng-deep .mat-menu-panel{
+  max-width: 100vw !important;
+  background-color: rgba(64, 0, 16, .9);
+}
+
+::ng-deep .mat-menu-content {
+  width: 100vw;
+  .mat-menu-item{
+    color: white;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+//@media (min-width: 576px) { ... }
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: 768px) {
+  .header-container {
+    height: 80px;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (max-width: 992px) {
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (max-width: 1200px) {
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (max-width: 1400px) {
 }

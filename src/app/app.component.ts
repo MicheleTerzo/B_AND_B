@@ -11,7 +11,7 @@ import {
   SCREEN_SMALL,
   SCREEN_XL,
   SCREEN_XXL,
-} from "./screen-config";
+} from "./config/screen-config";
 
 @Component({
   selector: "app-root",

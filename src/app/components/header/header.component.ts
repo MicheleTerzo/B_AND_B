@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, Output } from "@angular/core";
 import { IHeaderItems } from "../../interfaces/iheader-items";
-import { IScreenSizes } from '../../interfaces/iScreen-sizes';
+import { IScreenSizes } from "../../interfaces/iScreen-sizes";
+import { HEADER_ITEMS } from "../../config/header-config";
 
 @Component({
   selector: "app-header",
@@ -9,26 +10,11 @@ import { IScreenSizes } from '../../interfaces/iScreen-sizes';
 })
 export class HeaderComponent {
   @Input() screenWidth: number;
-  @Input() screenSizes : IScreenSizes;
+  @Input() screenSizes: IScreenSizes;
   @Output() itemEmitter: EventEmitter<string> = new EventEmitter<string>();
-  headerItems: IHeaderItems[] = [
-    {
-      text: "Storia",
-      id: "history",
-    },
-    {
-      text: "Struttura",
-      id: "structure",
-    },
-    {
-      text: "Dove trovarci",
-      id: "location",
-    },
-    {
-      text: "Contatti",
-      id: "contacts",
-    },
-  ];
+  headerItems: IHeaderItems[] = HEADER_ITEMS;
+
+  isMobileHeaderOpen: boolean = false;
 
   private _isViewportAtTop: boolean = true;
 
