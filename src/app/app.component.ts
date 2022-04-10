@@ -1,19 +1,54 @@
-import { AfterViewInit, Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  HostListener,
+  ViewChild,
+} from "@angular/core";
+import {
+  SCREEN_LG,
+  SCREEN_MD,
+  SCREEN_SMALL,
+  SCREEN_XL,
+  SCREEN_XXL,
+} from "./screen-config";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.scss"],
 })
 export class AppComponent implements AfterViewInit {
-  @ViewChild('history') historySection: ElementRef;
-  @ViewChild('jumbotron') jumbotronSection: ElementRef;
-  @ViewChild('structure') structureSection: ElementRef;
-  @ViewChild('location') locationSection: ElementRef;
-  @ViewChild('scrollButton') scrollButton: ElementRef;
-  @ViewChild('contacts') contactsSection: ElementRef;
+  @ViewChild("history") historySection: ElementRef;
+  @ViewChild("jumbotron") jumbotronSection: ElementRef;
+  @ViewChild("structure") structureSection: ElementRef;
+  @ViewChild("location") locationSection: ElementRef;
+  @ViewChild("scrollButton") scrollButton: ElementRef;
+  @ViewChild("contacts") contactsSection: ElementRef;
 
-  constructor() {}
+  screenSizes = {
+    screenSizeSmall: SCREEN_SMALL,
+    screenSizeMd: SCREEN_MD,
+    screenSizeLg: SCREEN_LG,
+    screenSizeXl: SCREEN_XL,
+    screenSizeXxl: SCREEN_XXL,
+  };
+
+  constructor() {
+    this.isScrolledIntoView();
+    this.getScreenSize();
+  }
+
+  private _screenWidth: number;
+
+  get screenWidth(): number {
+    return this._screenWidth;
+  }
+
+  set screenWidth(value: number) {
+    console.log("screenWidth", value);
+    this._screenWidth = value;
+  }
 
   private _isJumbotronScrolledIntoView: boolean = false;
 
@@ -37,23 +72,23 @@ export class AppComponent implements AfterViewInit {
 
   scrollToSection(sectionName: string): void {
     switch (sectionName) {
-      case 'jumbotron': {
+      case "jumbotron": {
         this.jumbotronSection.nativeElement.scrollIntoView();
         break;
       }
-      case 'history': {
+      case "history": {
         this.historySection.nativeElement.scrollIntoView();
         break;
       }
-      case 'structure': {
+      case "structure": {
         this.structureSection.nativeElement.scrollIntoView();
         break;
       }
-      case 'location': {
+      case "location": {
         this.locationSection.nativeElement.scrollIntoView();
         break;
       }
-      case 'contacts': {
+      case "contacts": {
         this.contactsSection.nativeElement.scrollIntoView();
 
         break;
@@ -62,10 +97,10 @@ export class AppComponent implements AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.scrollButton.nativeElement.classList.add('scroll-to-top-button-invisible');
+    this.scrollButton.nativeElement.classList.add("scroll-to-top-button-invisible");
   }
 
-  @HostListener('window:scroll', ['$event'])
+  @HostListener("window:scroll", ["$event"])
   isScrolledIntoView() {
     if (this.jumbotronSection) {
       const rect = this.jumbotronSection.nativeElement.getBoundingClientRect();
@@ -74,5 +109,10 @@ export class AppComponent implements AfterViewInit {
       this.isJumbotronScrolledIntoView = topShown && bottomShown;
     }
     this.isViewportAtTop = window.scrollY <= 0;
+  }
+
+  @HostListener("window:resize", ["$event"])
+  getScreenSize() {
+    this.screenWidth = window.innerWidth;
   }
 }

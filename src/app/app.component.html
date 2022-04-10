@@ -1,5 +1,14 @@
 <header>
-  <app-header (itemEmitter)="scrollToSection($event)" [isViewportAtTop]="isViewportAtTop"></app-header>
+  <app-header
+    (itemEmitter)="scrollToSection($event)"
+    [isViewportAtTop]="isViewportAtTop"
+    [ngClass]="{
+      'position-absolute': screenWidth <= screenSizes.screenSizeMd,
+      'position-fixed': screenWidth > screenSizes.screenSizeMd
+    }"
+    [screenSizes]="screenSizes"
+    [screenWidth]="screenWidth"
+  ></app-header>
 </header>
 <main>
   <section #jumbotron>

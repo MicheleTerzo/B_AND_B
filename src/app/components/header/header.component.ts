@@ -1,29 +1,32 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { IHeaderItems } from '../../interfaces/iheader-items';
+import { Component, EventEmitter, Input, Output } from "@angular/core";
+import { IHeaderItems } from "../../interfaces/iheader-items";
+import { IScreenSizes } from '../../interfaces/iScreen-sizes';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss'],
+  selector: "app-header",
+  templateUrl: "./header.component.html",
+  styleUrls: ["./header.component.scss"],
 })
 export class HeaderComponent {
+  @Input() screenWidth: number;
+  @Input() screenSizes : IScreenSizes;
   @Output() itemEmitter: EventEmitter<string> = new EventEmitter<string>();
   headerItems: IHeaderItems[] = [
     {
-      text: 'Storia',
-      id: 'history',
+      text: "Storia",
+      id: "history",
     },
     {
-      text: 'Struttura',
-      id: 'structure',
+      text: "Struttura",
+      id: "structure",
     },
     {
-      text: 'Dove trovarci',
-      id: 'location',
+      text: "Dove trovarci",
+      id: "location",
     },
     {
-      text: 'Contatti',
-      id: 'contacts',
+      text: "Contatti",
+      id: "contacts",
     },
   ];
 

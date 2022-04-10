@@ -1,4 +1,4 @@
-header {
+.header-container {
   height: 10vh;
   user-select: none;
   font-weight: bolder;
@@ -14,12 +14,6 @@ header {
     }
   }
 
-  .logo-container {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    font-family: 'Kalam', cursive;
-  }
 
   .user-button-container {
     height: 100%;
@@ -49,4 +43,10 @@ header {
 .header-colored {
   background-color: var(--accent-color);
   box-shadow: 0 0 18px 4px rgba(0, 0, 0, 0.3);
+}
+
+.mobile-container {
+  .menu-icon {
+    color: var(--custom-white);
+  }
 }

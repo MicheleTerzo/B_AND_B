@@ -1,7 +1,7 @@
 app-header {
-  position: fixed;
   width: 100%;
   z-index: 1000;
+  position: absolute;
 }
 
 .scroll-to-top-button {
@@ -50,5 +50,3 @@ section {
   width: 60%;
   background-color: var(--primary-color);
 }
-
-

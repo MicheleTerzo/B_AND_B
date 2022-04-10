@@ -1,16 +1,41 @@
-<header [ngClass]="{'header-transparent': isViewportAtTop, 'header-colored': !isViewportAtTop}">
-  <div class="container-fluid">
-    <div class="row d-flex justify-content-center align-items-center">
-      <div class="col-6 user-button-container">
+<div
+  [ngClass]="{
+    'header-transparent': isViewportAtTop && screenWidth >= screenSizes.screenSizeMd,
+    'header-colored': !isViewportAtTop && screenWidth >= screenSizes.screenSizeMd
+  }"
+  class='header-container'
+>
+  <div class='container-fluid'>
+    <div class='row d-flex justify-content-center align-items-center'>
+      <div
+        *ngIf='screenWidth >= screenSizes.screenSizeMd; else mobileSize'
+        class='col-12 user-button-container'
+      >
         <h3
-          (click)="emitClickedItem(i)"
-          *ngFor="let item of headerItems; let i = index"
-          [id]="item.id"
-          class="m-4 header-text"
+          (click)='emitClickedItem(i)'
+          *ngFor='let item of headerItems; let i = index'
+          [id]='item.id'
+          class='m-4 header-text'
         >
           {{ item.text }}
         </h3>
       </div>
+      <ng-template #mobileSize>
+        <div class='col-12 mobile-container'>
+          <button [matMenuTriggerFor]='headerMenu' mat-button>
+            <i class='fa-solid fa-bars fa-2x menu-icon'></i>
+          </button>
+          <mat-menu #headerMenu='matMenu' xPosition='after'>
+            <button
+              (click)='emitClickedItem(i)'
+              *ngFor='let menuItem of headerItems; let i = index'
+              mat-menu-item
+            >
+              {{ menuItem.text }}
+            </button>
+          </mat-menu>
+        </div>
+      </ng-template>
     </div>
   </div>
-</header>
+</div>
