@@ -1,7 +1,7 @@
 .jumbotron {
   height: 100vh;
   //padding-top: 10vh;
-  background-image: url('../../../assets/images/bg.jpg');
+  background-image: url("../../../assets/images/bg.jpg");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -27,8 +27,8 @@
       flex-direction: column;
 
       .logo-container {
-        width: 50vw;
-        height: 40vh;
+        width: 1200px;
+        height: 500px;
 
         img {
           width: 100%;
@@ -44,4 +44,37 @@
       }
     }
   }
+}
+
+// Small devices (landscape phones, 576px and up)
+//@media (min-width: 576px) { ... }
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: 768px) {
+  .jumbotron {
+    .jumbotron-container {
+      .welcome-box {
+        .logo-container {
+          width: 100%;
+          height: 200px;
+        }
+
+        .welcome-message {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (max-width: 992px) {
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (max-width: 1200px) {
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (max-width: 1400px) {
 }
