@@ -12,6 +12,7 @@ import {
   SCREEN_XL,
   SCREEN_XXL,
 } from "./config/screen-config";
+import { ViewportScroller } from "@angular/common";
 
 @Component({
   selector: "app-root",
@@ -34,7 +35,7 @@ export class AppComponent implements AfterViewInit {
     screenSizeXxl: SCREEN_XXL,
   };
 
-  constructor() {
+  constructor(private viewportScroller: ViewportScroller) {
     this.isScrolledIntoView();
     this.getScreenSize();
   }
@@ -71,26 +72,29 @@ export class AppComponent implements AfterViewInit {
   }
 
   scrollToSection(sectionName: string): void {
+    console.log(sectionName);
     switch (sectionName) {
       case "jumbotron": {
-        this.jumbotronSection.nativeElement.scrollIntoView();
+        window.scrollTo({ top: this.jumbotronSection.nativeElement.offsetTop });
+
         break;
       }
       case "history": {
-        this.historySection.nativeElement.scrollIntoView();
+        window.scrollTo({ top: this.historySection.nativeElement.offsetTop });
         break;
       }
       case "structure": {
-        this.structureSection.nativeElement.scrollIntoView();
+        window.scrollTo({ top: this.structureSection.nativeElement.offsetTop });
+
         break;
       }
       case "location": {
-        this.locationSection.nativeElement.scrollIntoView();
+        window.scrollTo({ top: this.locationSection.nativeElement.offsetTop });
+
         break;
       }
       case "contacts": {
-        this.contactsSection.nativeElement.scrollIntoView();
-
+        window.scrollTo({ top: this.contactsSection.nativeElement.offsetTop });
         break;
       }
     }
