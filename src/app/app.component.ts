@@ -36,8 +36,7 @@ export class AppComponent implements AfterViewInit {
   };
 
   constructor(private viewportScroller: ViewportScroller) {
-    this.isScrolledIntoView();
-    this.getScreenSize();
+
   }
 
   private _screenWidth: number;
@@ -101,7 +100,9 @@ export class AppComponent implements AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.scrollButton.nativeElement.classList.add("scroll-to-top-button-invisible");
+    this.isScrolledIntoView();
+    this.getScreenSize();
+    // this.scrollButton.nativeElement.classList.add("scroll-to-top-button-invisible");
   }
 
   @HostListener("window:scroll", ["$event"])
