@@ -104,7 +104,7 @@ export class AppComponent implements AfterViewInit {
   isScrolledIntoView() {
     if (this.jumbotronSection) {
       const rect = this.jumbotronSection.nativeElement.getBoundingClientRect();
-      const topShown = rect.top >= -50;
+      const topShown = rect.top >= 0;
       const bottomShown = rect.bottom <= window.innerHeight;
       this.isJumbotronScrolledIntoView = topShown && bottomShown;
     }
