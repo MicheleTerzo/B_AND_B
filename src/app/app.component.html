@@ -3,8 +3,8 @@
     (itemEmitter)='scrollToSection($event)'
     [isViewportAtTop]='isViewportAtTop'
     [ngClass]="{
-      'position-absolute': screenWidth <= screenSizes.screenSizeMd,
-      'position-fixed': screenWidth > screenSizes.screenSizeMd
+      'position-absolute': screenWidth <= screenSizes.screenSizeLg,
+      'position-fixed': screenWidth > screenSizes.screenSizeLg
     }"
     [screenSizes]='screenSizes'
     [screenWidth]='screenWidth'

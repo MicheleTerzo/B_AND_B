@@ -1,14 +1,14 @@
 <div
   [ngClass]="{
-    'header-transparent': isViewportAtTop && screenWidth >= screenSizes.screenSizeMd,
-    'header-colored': !isViewportAtTop && screenWidth >= screenSizes.screenSizeMd
+    'header-transparent': isViewportAtTop && screenWidth >= screenSizes.screenSizeLg,
+    'header-colored': !isViewportAtTop && screenWidth >= screenSizes.screenSizeLg
   }"
   class="header-container"
 >
   <div class="container-fluid">
     <div class="row d-flex justify-content-center align-items-center">
       <div
-        *ngIf="screenWidth >= screenSizes.screenSizeMd; else mobileSize"
+        *ngIf="screenWidth >= screenSizes.screenSizeLg; else mobileSize"
         class="col-12 user-button-container"
       >
         <h3

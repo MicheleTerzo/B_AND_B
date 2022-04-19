@@ -55,7 +55,7 @@ section {
 //@media (min-width: 576px) { ... }
 
 // Medium devices (tablets, 768px and up)
-@media (max-width: 768px) {
+@media (min-width: 0px) and (max-width: 991.98px) {
   .scroll-to-top-button{
     height: 3rem;
     width: 3rem;
@@ -63,7 +63,11 @@ section {
 }
 
 // Large devices (desktops, 992px and up)
-@media (max-width: 992px) {
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .scroll-to-top-button{
+    height: 3.5rem;
+    width: 3.5rem;
+  }
 }
 
 // X-Large devices (large desktops, 1200px and up)
