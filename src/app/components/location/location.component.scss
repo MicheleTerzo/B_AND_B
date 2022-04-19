@@ -43,7 +43,13 @@ iframe {
 }
 
 // X-Large devices (large desktops, 1200px and up)
-@media (max-width: 1200px) {
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  .place-location {
+    padding: 15vh 10vw;
+  }
+  .map-frame {
+    width: 100%;
+  }
 }
 
 // XX-Large devices (larger desktops, 1400px and up)

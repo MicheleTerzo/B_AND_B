@@ -73,10 +73,6 @@
   }
 }
 
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
-}
-
 // Medium devices (tablets, 768px and up)
 @media (min-width: 0px) and (max-width: 991.98px) {
   .place-description {
@@ -106,7 +102,17 @@
 }
 
 // X-Large devices (large desktops, 1200px and up)
-@media (max-width: 1200px) {
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  .place-description {
+    padding: 15vh 10vw;
+  }
+  .structure-box {
+    margin-bottom: 3rem;
+  }
+
+  .services-container {
+    margin-top: 3rem;
+  }
 }
 
 // XX-Large devices (larger desktops, 1400px and up)
