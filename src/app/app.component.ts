@@ -35,9 +35,7 @@ export class AppComponent implements AfterViewInit {
     screenSizeXxl: SCREEN_XXL,
   };
 
-  constructor(private viewportScroller: ViewportScroller) {
-
-  }
+  constructor(private viewportScroller: ViewportScroller) {}
 
   private _screenWidth: number;
 
@@ -74,26 +72,26 @@ export class AppComponent implements AfterViewInit {
     console.log(sectionName);
     switch (sectionName) {
       case "jumbotron": {
-        window.scrollTo({ top: this.jumbotronSection.nativeElement.offsetTop });
+        window.scrollTo({ top: this.jumbotronSection.nativeElement.offsetTop - 100 });
 
         break;
       }
       case "history": {
-        window.scrollTo({ top: this.historySection.nativeElement.offsetTop });
+        window.scrollTo({ top: this.historySection.nativeElement.offsetTop - 100 });
         break;
       }
       case "structure": {
-        window.scrollTo({ top: this.structureSection.nativeElement.offsetTop });
+        window.scrollTo({ top: this.structureSection.nativeElement.offsetTop - 100 });
 
         break;
       }
       case "location": {
-        window.scrollTo({ top: this.locationSection.nativeElement.offsetTop });
+        window.scrollTo({ top: this.locationSection.nativeElement.offsetTop - 100 });
 
         break;
       }
       case "contacts": {
-        window.scrollTo({ top: this.contactsSection.nativeElement.offsetTop });
+        window.scrollTo({ top: this.contactsSection.nativeElement.offsetTop - 100 });
         break;
       }
     }

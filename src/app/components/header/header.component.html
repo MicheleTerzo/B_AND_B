@@ -1,53 +1,59 @@
 <div
   [ngClass]="{
-    'header-transparent': isViewportAtTop && screenWidth >= screenSizes.screenSizeLg,
-    'header-colored': !isViewportAtTop && screenWidth >= screenSizes.screenSizeLg
+    'header-transparent': isViewportAtTop,
+    'header-colored': !isViewportAtTop
   }"
-  class="header-container"
+  class='header-container'
 >
-  <div class="container-fluid">
-    <div class="row d-flex justify-content-center align-items-center">
+  <div class='container-fluid'>
+    <div class='row d-flex justify-content-center align-items-center'>
       <div
-        *ngIf="screenWidth >= screenSizes.screenSizeLg; else mobileSize"
-        class="col-12 user-button-container"
+        *ngIf='screenWidth >= screenSizes.screenSizeLg; else mobileSize'
+        class='col-12 user-button-container'
       >
         <h3
-          (click)="emitClickedItem(i)"
-          *ngFor="let item of headerItems; let i = index"
-          [id]="item.id"
-          class="m-4 header-text"
+          (click)='emitClickedItem(i)'
+          *ngFor='let item of headerItems; let i = index'
+          [id]='item.id'
+          class='m-4 header-text'
         >
           {{ item.text }}
         </h3>
       </div>
       <ng-template #mobileSize>
-        <div class="col-12 mobile-container">
+        <div class='col-6 mobile-container'>
           <button
-            [matMenuTriggerFor]="headerMenu"
-            (click)="isMobileHeaderOpen = !isMobileHeaderOpen"
+            (click)='isMobileHeaderOpen = !isMobileHeaderOpen'
+            [matMenuTriggerFor]='headerMenu'
             mat-button
           >
             <i
-              class="fa-solid fa-2x menu-icon"
               [ngClass]="{
                 'fa-bars': !isMobileHeaderOpen,
                 'fa-caret-down': isMobileHeaderOpen
               }"
+              class='fa-solid fa-2x menu-icon'
             ></i>
           </button>
           <mat-menu
-            #headerMenu="matMenu"
-            xPosition="after"
-            (closed)="isMobileHeaderOpen = false"
+            #headerMenu='matMenu'
+            (closed)='isMobileHeaderOpen = false'
+            xPosition='after'
           >
             <button
-              (click)="emitClickedItem(i)"
-              *ngFor="let menuItem of headerItems; let i = index"
+              (click)='emitClickedItem(i)'
+              *ngFor='let menuItem of headerItems; let i = index'
               mat-menu-item
             >
               {{ menuItem.text }}
             </button>
           </mat-menu>
+        </div>
+        <div [ngClass]="{
+    'header-logo-not-visible': isViewportAtTop,
+    'header-visible': !isViewportAtTop
+  }" class='col-6 header-logo d-flex justify-content-end align-items-center'>
+          <img alt='' src='assets/logos/white_logos/logo_transparent_edit.png'>
         </div>
       </ng-template>
     </div>

@@ -2,10 +2,7 @@
   <app-header
     (itemEmitter)='scrollToSection($event)'
     [isViewportAtTop]='isViewportAtTop'
-    [ngClass]="{
-      'position-absolute': screenWidth <= screenSizes.screenSizeLg,
-      'position-fixed': screenWidth > screenSizes.screenSizeLg
-    }"
+
     [screenSizes]='screenSizes'
     [screenWidth]='screenWidth'
   ></app-header>
@@ -27,18 +24,18 @@
   <section #contacts>
     <app-contacts></app-contacts>
   </section>
-  <div
-    #scrollButton
-    (click)="scrollToSection('jumbotron')"
-    [ngClass]="{
-      'scroll-to-top-button-visibile': !isJumbotronScrolledIntoView,
-      'scroll-to-top-button-invisible': isJumbotronScrolledIntoView
-    }"
-    class='scroll-to-top-button'
-    mat-ripple
-  >
-    <i class='fa-solid fa-arrow-up fa-2x'></i>
-  </div>
+  <!--  <div-->
+  <!--    #scrollButton-->
+  <!--    (click)="scrollToSection('jumbotron')"-->
+  <!--    [ngClass]="{-->
+  <!--      'scroll-to-top-button-visibile': !isJumbotronScrolledIntoView,-->
+  <!--      'scroll-to-top-button-invisible': isJumbotronScrolledIntoView-->
+  <!--    }"-->
+  <!--    class='scroll-to-top-button'-->
+  <!--    mat-ripple-->
+  <!--  >-->
+  <!--    <i class='fa-solid fa-arrow-up fa-2x'></i>-->
+  <!--  </div>-->
 </main>
 <footer>
   <app-footer></app-footer>
