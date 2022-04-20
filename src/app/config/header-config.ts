@@ -1,18 +1,18 @@
 export const HEADER_ITEMS = [
   {
-    text: "Storia",
+    text: "HEADER.HISTORY",
     id: "history",
   },
   {
-    text: "Struttura",
+    text: "HEADER.STRUCTURE",
     id: "structure",
   },
   {
-    text: "Dove trovarci",
+    text: "HEADER.FINDUS",
     id: "location",
   },
   {
-    text: "Contatti",
+    text: "HEADER.CONTACTS",
     id: "contacts",
   },
 ];

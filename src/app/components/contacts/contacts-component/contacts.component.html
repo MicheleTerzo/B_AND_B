@@ -2,20 +2,20 @@
   <div class="container-fluid">
     <div class="row mb-5 pe-5 ps-5">
       <div class="col-12 d-flex justify-content-center align-items-center">
-        <h1 class="section-title">Contatti</h1>
+        <h1 class="section-title">{{'CONTACTS.SECTION_TITLE' | translate}}</h1>
       </div>
     </div>
     <div class="row pe-xl-5 ps-xl-5">
       <div class="col-md-12 col-lg-6 d-flex justify-content-center align-items-start flex-column mb-5">
         <div class="mb-3 contact-info">
-          <p>Di seguito troverai tutti le informazioni utili per contattarci.</p>
+          <p>{{'CONTACTS.DESCRIPTION' | translate}}</p>
         </div>
 
         <!--TELEFONO-->
         <div class="mb-3 contact-info">
           <i class="contact-info-icon fa-solid fa-phone me-3 fa-2x"></i>
           <p>
-            <span class="highlighted-text">Telefono</span>
+            <span class="highlighted-text">{{'CONTACTS.PHONE' | translate}}</span>
             - 12345678
           </p>
         </div>
@@ -24,7 +24,7 @@
         <div class="mb-3 contact-info">
           <i class="contact-info-icon fa-solid fa-at me-3 fa-2x"></i>
           <p>
-            <span class="highlighted-text">E-Mail</span>
+            <span class="highlighted-text">{{'CONTACTS.EMAIL' | translate}}</span>
             - email@email.com
           </p>
         </div>
@@ -32,18 +32,14 @@
         <!--FACEBOOK-->
         <div class="mb-3 contact-info">
           <i class="contact-info-icon fa-brands fa-facebook me-3 fa-2x"></i>
-          <p>
-            Seguici anche su
-            <a target="_blank" href="https://www.facebook.com/AFFITTACAMERE-ANTICA-DIMORA-PALAZZO-ROVITTI-128275070544624/" class="link">Facebook</a>
+          <p [innerHTML]="'CONTACTS.FACEBOOK' | translate">
           </p>
         </div>
 
         <!--BOOKING-->
         <div class="mb-3 contact-info">
           <i class="contact-info-icon fa-solid fa-bed me-3 fa-2x"></i>
-          <p>
-            Controlla i prezzi su
-            <a target="_blank"  class="link" href="http://www.booking.com/Share-YgzK01">Booking</a>
+          <p [innerHTML]="'CONTACTS.BOOKING' | translate">
           </p>
         </div>
 
@@ -51,8 +47,7 @@
         <div class="contact-info">
           <i class="contact-info-icon fa-solid fa-envelope me-3 fa-2x"></i>
           <p>
-            Se hai altri dubbi o richieste utilizza il form di fianco per
-            <span class="highlighted-text message">inviarci un messaggio</span>.
+            {{'CONTACTS.MESSAGE' | translate}}
           </p>
         </div>
       </div>

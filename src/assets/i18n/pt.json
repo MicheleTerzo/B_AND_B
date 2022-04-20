@@ -1,0 +1,69 @@
+{
+  "GENERAL": {
+    "TITLE": "AFITTACAMERE \"ANTICA DIMORA\" PALAZZO ROVITTI"
+  },
+  "HEADER": {
+    "HISTORY": "História",
+    "STRUCTURE": "Estrutura",
+    "FINDUS": "Onde nos encontrar",
+    "CONTACTS": "Contactos"
+  },
+  "JUMBOTRON": {
+    "TEXT": "Se desideri intraprendere un viaggio verso la scoperta di fascino e bellezze\n          artistiche, dovresti scegliere come meta l'attraente e ospitale centro storico\n          di Cerchiara di Calabria.",
+    "BUTTON": "Scopri di piu'"
+  },
+  "HISTORY": {
+    "SECTION_TITLE": "La nostra storia",
+    "TEXT1": "\"Palazzo Rovitti \" è un palazzo storico di Cerchiara di Calabria del 1600, che ha\n        visto la presenza di importanti personaggi storici, una fra tutte è quella dei\n        reali del Regno delle due Sicilie: Francesco II e Maria Sofia Amalia.",
+    "TEXT2": "Inizialmente fu la fissa dimora dei signori Rovitti, uomini di legge, e degli\n        amministratori dei beni appartenenti ai feudatari di Cerchiara, i Pignatelli. Con\n        questi ultimi vi è un legame evidente sul blasone di famiglia, sul quale sono\n        impresse tre pignate oltre le corna d'ariete utilizzate per allontanare il\n        malocchio.",
+    "TEXT3": "Dal 1950 diventa dimora estiva della gentilizia famiglia Rovitti - Gentile, da\n        quindici anni or sono, ospita al suo interno l'attività ricettiva di"
+  },
+  "PLACE_DESCRIPTION": {
+    "SECTION_TITLE": "Struttura e servizi",
+    "FEATURES": {
+      "FEATURE_1": {
+        "TITLE": "Lorem Ipsum",
+        "DESCRIPTION": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      },
+      "FEATURE_2": {
+        "TITLE": "Lorem Ipsum",
+        "DESCRIPTION": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      },
+      "FEATURE_3": {
+        "TITLE": "Lorem Ipsum",
+        "DESCRIPTION": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      }
+    },
+    "SERVICES": {
+      "TITLE": "Servizi garantiti",
+      "SERVICE_1": {
+        "TITLE": "Colazione Inclusa",
+        "DESCRIPTION": "La colazione all'italiana viene servita tutte le mattine "
+      },
+      "SERVICE_2": {
+        "TITLE": "Animali benvenuti",
+        "DESCRIPTION": "Gli animali sono consenti senza ulteriori aumenti di prezzo "
+      },
+      "SERVICE_3": {
+        "TITLE": "Parcheggio gratuito",
+        "DESCRIPTION": "Il parcheggio e' gratuito e non sono necessarie prenotazioni "
+      },
+      "SERVICE_4": {
+        "TITLE": "Esterni meravigliosi",
+        "DESCRIPTION": "Sono a disposizione un ampio terrazzo e il giardino"
+      }
+    }
+  },
+  "FIND_US": {
+    "SECTION_TITLE": "Onde nos encontrar"
+  },
+  "CONTACTS": {
+    "SECTION_TITLE": "Contactos",
+    "DESCRIPTION": "Abaixo você encontrará todas as informações úteis para entrar em contato conosco.",
+    "PHONE": "Telefone",
+    "EMAIL": "E-Mail",
+    "FACEBOOK": "Siga-nos no <a target=\"_blank\" href=\"https://www.facebook.com/AFFITTACAMERE-ANTICA-DIMORA-PALAZZO-ROVITTI-128275070544624/\" class=\"link\">Facebook</a>",
+    "BOOKING": "Confira os preços em <a target=\"_blank\"  class=\"link\" href=\"http://www.booking.com/Share-YgzK01\">Reserva</a>",
+    "MESSAGE": "Se você tiver outras dúvidas ou solicitações, use o formulário ao lado para nos enviar uma mensagem."
+  }
+}

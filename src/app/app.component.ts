@@ -1,41 +1,38 @@
-import {
-  AfterViewInit,
-  Component,
-  ElementRef,
-  HostListener,
-  ViewChild,
-} from "@angular/core";
-import {
-  SCREEN_LG,
-  SCREEN_MD,
-  SCREEN_SMALL,
-  SCREEN_XL,
-  SCREEN_XXL,
-} from "./config/screen-config";
-import { ViewportScroller } from "@angular/common";
+import { AfterViewInit, Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import { SCREEN_LG, SCREEN_MD, SCREEN_SMALL, SCREEN_XL, SCREEN_XXL } from './config/screen-config';
+import { ViewportScroller } from '@angular/common';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
-  selector: "app-root",
-  templateUrl: "./app.component.html",
-  styleUrls: ["./app.component.scss"],
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements AfterViewInit {
-  @ViewChild("history") historySection: ElementRef;
-  @ViewChild("jumbotron") jumbotronSection: ElementRef;
-  @ViewChild("structure") structureSection: ElementRef;
-  @ViewChild("location") locationSection: ElementRef;
-  @ViewChild("scrollButton") scrollButton: ElementRef;
-  @ViewChild("contacts") contactsSection: ElementRef;
+  @ViewChild('history') historySection: ElementRef;
+  @ViewChild('jumbotron') jumbotronSection: ElementRef;
+  @ViewChild('structure') structureSection: ElementRef;
+  @ViewChild('location') locationSection: ElementRef;
+  @ViewChild('scrollButton') scrollButton: ElementRef;
+  @ViewChild('contacts') contactsSection: ElementRef;
 
   screenSizes = {
     screenSizeSmall: SCREEN_SMALL,
     screenSizeMd: SCREEN_MD,
     screenSizeLg: SCREEN_LG,
     screenSizeXl: SCREEN_XL,
-    screenSizeXxl: SCREEN_XXL,
+    screenSizeXxl: SCREEN_XXL
   };
 
-  constructor(private viewportScroller: ViewportScroller) {}
+  constructor(
+    private viewportScroller: ViewportScroller,
+    private _translateService: TranslateService
+  ) {
+    _translateService.addLangs(['it', 'en', 'de', 'fr', 'es', 'nl', 'pt', 'ru']);
+    _translateService.setDefaultLang('it');
+    const browserLang = _translateService.getBrowserLang();
+    _translateService.use(browserLang.match(/it|en|de|fr|es|nl|pt|ru/) ? browserLang : 'it');
+  }
 
   private _screenWidth: number;
 
@@ -44,7 +41,7 @@ export class AppComponent implements AfterViewInit {
   }
 
   set screenWidth(value: number) {
-    console.log("screenWidth", value);
+    console.log('screenWidth', value);
     this._screenWidth = value;
   }
 
@@ -71,26 +68,26 @@ export class AppComponent implements AfterViewInit {
   scrollToSection(sectionName: string): void {
     console.log(sectionName);
     switch (sectionName) {
-      case "jumbotron": {
+      case 'jumbotron': {
         window.scrollTo({ top: this.jumbotronSection.nativeElement.offsetTop - 100 });
 
         break;
       }
-      case "history": {
+      case 'history': {
         window.scrollTo({ top: this.historySection.nativeElement.offsetTop - 100 });
         break;
       }
-      case "structure": {
+      case 'structure': {
         window.scrollTo({ top: this.structureSection.nativeElement.offsetTop - 100 });
 
         break;
       }
-      case "location": {
+      case 'location': {
         window.scrollTo({ top: this.locationSection.nativeElement.offsetTop - 100 });
 
         break;
       }
-      case "contacts": {
+      case 'contacts': {
         window.scrollTo({ top: this.contactsSection.nativeElement.offsetTop - 100 });
         break;
       }
@@ -103,7 +100,7 @@ export class AppComponent implements AfterViewInit {
     // this.scrollButton.nativeElement.classList.add("scroll-to-top-button-invisible");
   }
 
-  @HostListener("window:scroll", ["$event"])
+  @HostListener('window:scroll', ['$event'])
   isScrolledIntoView() {
     if (this.jumbotronSection) {
       const rect = this.jumbotronSection.nativeElement.getBoundingClientRect();
@@ -114,7 +111,7 @@ export class AppComponent implements AfterViewInit {
     this.isViewportAtTop = window.scrollY <= 0;
   }
 
-  @HostListener("window:resize", ["$event"])
+  @HostListener('window:resize', ['$event'])
   getScreenSize() {
     this.screenWidth = window.innerWidth;
   }
