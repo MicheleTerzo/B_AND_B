@@ -1,59 +1,59 @@
-<div class="contacts">
-  <div class="container-fluid">
-    <div class="row mb-5 pe-5 ps-5">
-      <div class="col-12 d-flex justify-content-center align-items-center">
-        <h1 class="section-title">{{'CONTACTS.SECTION_TITLE' | translate}}</h1>
+<div class='contacts'>
+  <div class='container-fluid'>
+    <div class='row mb-5 pe-5 ps-5'>
+      <div class='col-12 d-flex justify-content-center align-items-center'>
+        <h1 class='section-title'>{{'CONTACTS.SECTION_TITLE' | translate}}</h1>
       </div>
     </div>
-    <div class="row pe-xl-5 ps-xl-5">
-      <div class="col-md-12 col-lg-6 d-flex justify-content-center align-items-start flex-column mb-5">
-        <div class="mb-3 contact-info">
+    <div class='row pe-xl-5 ps-xl-5'>
+      <div class='col-12 d-flex justify-content-center align-items-start flex-column mb-5'>
+        <div class='mb-3 contact-info'>
           <p>{{'CONTACTS.DESCRIPTION' | translate}}</p>
         </div>
 
         <!--TELEFONO-->
-        <div class="mb-3 contact-info">
-          <i class="contact-info-icon fa-solid fa-phone me-3 fa-2x"></i>
+        <div class='mb-3 contact-info'>
+          <i class='contact-info-icon fa-solid fa-phone me-3 fa-2x'></i>
           <p>
-            <span class="highlighted-text">{{'CONTACTS.PHONE' | translate}}</span>
+            <span class='highlighted-text'>{{'CONTACTS.PHONE' | translate}}</span>
             - 12345678
           </p>
         </div>
 
         <!--MAIL-->
-        <div class="mb-3 contact-info">
-          <i class="contact-info-icon fa-solid fa-at me-3 fa-2x"></i>
+        <div class='mb-3 contact-info'>
+          <i class='contact-info-icon fa-solid fa-at me-3 fa-2x'></i>
           <p>
-            <span class="highlighted-text">{{'CONTACTS.EMAIL' | translate}}</span>
+            <span class='highlighted-text'>{{'CONTACTS.EMAIL' | translate}}</span>
             - email@email.com
           </p>
         </div>
 
         <!--FACEBOOK-->
-        <div class="mb-3 contact-info">
-          <i class="contact-info-icon fa-brands fa-facebook me-3 fa-2x"></i>
+        <div class='mb-3 contact-info'>
+          <i class='contact-info-icon fa-brands fa-facebook me-3 fa-2x'></i>
           <p [innerHTML]="'CONTACTS.FACEBOOK' | translate">
           </p>
         </div>
 
         <!--BOOKING-->
-        <div class="mb-3 contact-info">
-          <i class="contact-info-icon fa-solid fa-bed me-3 fa-2x"></i>
+        <div class='mb-3 contact-info'>
+          <i class='contact-info-icon fa-solid fa-bed me-3 fa-2x'></i>
           <p [innerHTML]="'CONTACTS.BOOKING' | translate">
           </p>
         </div>
 
-        <!--MESSAGGIO-->
-        <div class="contact-info">
-          <i class="contact-info-icon fa-solid fa-envelope me-3 fa-2x"></i>
+        <!--&lt;!&ndash;MESSAGGIO&ndash;&gt;
+        <div class='contact-info'>
+          <i class='contact-info-icon fa-solid fa-envelope me-3 fa-2x'></i>
           <p>
-            {{'CONTACTS.MESSAGE' | translate}}
+            {{'CONTACTS.MESSAGE' | translate}} <a href='mailto:email@email.it' target='_blank'>Inviaci un messaggio</a>
           </p>
-        </div>
+        </div>-->
       </div>
-      <div class="col-md-12 col-lg-6">
+      <!--<div class="col-md-12 col-lg-6">
         <app-contacts-form></app-contacts-form>
-      </div>
+      </div>-->
     </div>
   </div>
 </div>
